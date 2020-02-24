@@ -1,13 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button } from 'shineout'
+import { Button } from 'shineout';
+import { DatePicker } from 'shineout'
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button type="success">成功按钮</Button>
+        <DatePicker type="date" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
