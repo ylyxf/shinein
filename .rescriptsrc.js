@@ -5,11 +5,14 @@ const apiMocker = require('mocker-api');
 
 module.exports = [
     {
-        devServer: () => ({
-            before(app) {
+        devServer: config => {
+            defaultBefore = config.before;
+            config.before = (app, server) => {
+                defaultBefore(app, server);
                 apiMocker(app, path.resolve('./mock/index.js'), {})
             }
-        })
+            return config
+        }
     },
     ['use-babel-config', '.babelrc']
     , appendWebpackPlugin(

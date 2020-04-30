@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button type="success">成功按钮</Button>
-        <DatePicker type="date" />
+        
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
